@@ -31,3 +31,13 @@ Route::get('/seunome/{nome?}', function($nome=null) {
     
         echo "vc não digitou nenhum nome";
 });
+
+Route::get('/rotacomregras/{nome}/{n}', function($nome, $n) {
+    
+    for($i=0; $i<$n; $i++){
+
+        echo "olá! Seja bem vindo, $nome <br>" ;
+
+    }
+    
+})->where('nome', '[a-zA-Z]+')->where('n', '[0-9]+');
