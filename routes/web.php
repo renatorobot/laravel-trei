@@ -41,3 +41,29 @@ Route::get('/rotacomregras/{nome}/{n}', function($nome, $n) {
     }
     
 })->where('nome', '[a-zA-Z]+')->where('n', '[0-9]+');
+
+
+
+Route::prefix('/app')->group(function(){
+
+    Route::get('/', function() {
+    
+       return view('app');
+        
+    });
+
+    Route::get('/user', function() {
+    
+        return view('user');
+         
+     });
+
+
+     Route::get('profile/', function() {
+    
+        return view('profile');
+         
+     });
+
+
+});
