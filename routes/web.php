@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -86,3 +88,42 @@ Route::get('/produtos', function() {
     return redirect()->route('meusprodutos');
 
  });
+
+
+
+Route::post('/requisicoes', function(Request $request) {
+    
+    echo "Hello POST";
+
+});
+
+Route::delete('/requisicoes', function(Request $request) {
+    
+    echo "Hello DELETE";
+
+});
+
+Route::put('/requisicoes', function(Request $request) {
+    
+    echo "Hello PUT";
+
+});
+
+Route::patch('/requisicoes', function(Request $request) {
+    
+    echo "Hello PATCH";
+
+});
+
+Route::options('/requisicoes', function(Request $request) {
+    
+    echo "Hello OPTIONS";
+
+});
+
+Route::get('/requisicoes', function(Request $request) {
+    
+    echo "Hello GET";
+
+});
+
