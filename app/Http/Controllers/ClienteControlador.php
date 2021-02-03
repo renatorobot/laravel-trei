@@ -11,7 +11,7 @@ class ClienteControlador extends Controller
     private $cliente = [
 
         ['id'=>1, 'nome'=>'Pavel'],
-        ['id'=>2, 'nome'=>'Jośe'],
+        ['id'=>2, 'nome'=>'José'],
         ['id'=>3, 'nome'=>'Waldir'],
         ['id'=>4, 'nome'=>'Romeu'],
 
@@ -24,8 +24,9 @@ class ClienteControlador extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $clientes = $this->cliente;
+        return view('clientes.index', compact(['clientes']));
     }
 
     /**
