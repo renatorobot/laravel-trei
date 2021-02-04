@@ -54,6 +54,7 @@ class ClienteControlador extends Controller
         return redirect()->route('cliente.index');
     }
 
+
     /**
      * Display the specified resource.
      *
@@ -62,7 +63,10 @@ class ClienteControlador extends Controller
      */
     public function show($id)
     {
-        //
+        $cliente = $this->cliente;
+        $cliente = $cliente[$id-1]; 
+
+        return view('clientes.show', compact(['cliente']));
     }
 
     /**
